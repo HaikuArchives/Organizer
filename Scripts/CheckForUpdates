@@ -1,0 +1,3 @@
+#! /bin/sh
+wget -O /boot/home/config/settings/fSub/Organizer/Settings/OrganizerVersion.txt http://ibar.sourceforge.net/fSub/OrganizerVersion.txt &
+wget -O /boot/home/config/settings/fSub/Organizer/Settings/OrganizerURL.txt http://ibar.sourceforge.net/fSub/OrganizerURL.txt &

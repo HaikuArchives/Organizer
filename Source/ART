@@ -1,0 +1,22 @@
+Plans for rewritten Calender-Class
+
+Each date should have its own "object thing"
+
+Example: 
+
+Class : CalenderDate
+{
+public:
+BRect		fBounds;
+BString		fDayName;
+int			fDayNumber;
+int			fMonthNumber;
+int			fYearNumber;
+};
+
+1january = new CalenderDate;
+1january.fBounds = (35, 35, 70, 70)
+1january.fDayName.SetTo("Monday");
+1january.fDayNumber = 1;
+1january.fMonthNumber = 1;
+1january.fYearNumber = 1337;

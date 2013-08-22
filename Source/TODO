@@ -1,0 +1,21 @@
+Todo
+
+Bugs:
+Rename variables					Low Priority
+Fix Quitproblem					DONE?
+0:01								DONE?
+Last History File Bug					DONE?
+First of everymonth bug				DONE?
+Fix quitting after running OpenGL Game	
+Fix Cancel						Low Priority
+Fix Save							Low Priority
+Localisation
+
+Features:
+Export HTML						DONE?
+Add dayname to export				Low Priority
+Translation						Low Priority
+DoubleClick on notes and stuff			Low Priority
+
+For next release
+Rewrite calender class				needs to be done......

@@ -1,0 +1,6 @@
+#! /bin/sh
+quit "application/x-vnd.fSub.Organizer"
+kill -9 Organizer
+sleep 1
+THISDIR=$(dirname "$0")
+"$THISDIR/../Organizer"
