@@ -266,7 +266,7 @@ _SetBoxBounds();
 	//We dont take your false dates around here
 	if (fYear < 2000 || fMonthNumber > 12 || fMonthNumber < 1 || fDayNumber > 31 || fDayNumber < 1)
 	{
-	cout << "Date doesnt exist" << endl;
+	std::cout << "Date doesnt exist" << std::endl;
 	}
 	//If American style, add one more day (they are stupid and begin the week with a sunday)
 	if (fCalenderIsAmericaStyle)

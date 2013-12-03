@@ -20,9 +20,8 @@ SRCS=aboutWindow.cpp \
 	Secret/glView.cpp \
 	Secret/glWindow.cpp
 RSRCS= Project.rsrc
-LIBS= root \
-	be \
-	stdc++.r4 \
+LIBS= be \
+	$(STDCPPLIBS) \
 	game \
 	GL \
 	tracker \
@@ -38,7 +37,7 @@ DRIVER_PATH =
 APP_VERSION = 
 DEBUGGER = 
 LINKER_FLAGS = 
-COMPILER_FLAGS = 
+CFLAGS= -fpermissive
 SYMBOLS = 
 WARNINGS = 
 

@@ -7,9 +7,8 @@ SRCS= Bitmap.cpp \
 	FlickerFreeStringView.cpp \
 	Postit.cpp \
 	Save.cpp
-LIBS= root \
-	be \
-	stdc++.r4
+LIBS= be \
+	$(STDCPPLIBS)
 RSRCS= 
 DEFINES= 
 LIBPATHS= 
@@ -21,7 +20,7 @@ DRIVER_PATH =
 APP_VERSION = 
 DEBUGGER = 
 LINKER_FLAGS = 
-COMPILER_FLAGS = 
+CFLAGS= -fpermissive
 SYMBOLS = 
 WARNINGS = 
 

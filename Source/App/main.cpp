@@ -409,16 +409,16 @@ void mApp::MessageReceived(BMessage *message)
 //-----------------------------------------------------------------
 void mApp::RefsReceived(BMessage *message)
 {
-cout << "REFS RECIEVED!! " << endl;
+std::cout << "REFS RECIEVED!! " << std::endl;
 //Get Filepanelpath
 int32	count = 0;
 uint32	type = 0;
 message->GetInfo("refs", &type, &count);
-cout << "type is " << type << "count is " << count << endl;
+std::cout << "type is " << type << "count is " << count << std::endl;
 	for (int32 i = 0; i < count; i++) 
 	{
 	entry_ref	ref;
-	cout << " asd its " << i << endl;
+	std::cout << " asd its " << i <<std::endl;
 		if (message->FindRef("refs", i, &ref) == B_NO_ERROR) 
 		{
 		BEntry entry(&ref);
@@ -432,12 +432,12 @@ cout << "type is " << type << "count is " << count << endl;
 			}
 			else
 			{
-			cout << "2_" << endl;
+			std::cout << "2_" << std::endl;
 			}
 		}
 		else
 		{
-		cout << "1_" << endl;
+		std::cout << "1_" << std::endl;
 		}
 	}
 }

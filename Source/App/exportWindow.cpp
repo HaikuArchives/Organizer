@@ -210,7 +210,7 @@ fContent << "</body>\n</html>";
 fSaveTo.Append("/");
 fSaveTo.Append(_ExportView->mFileNameControl->Text());
 FILE* file = fopen(fSaveTo.String(), "w");
-cout << fSaveTo.String() << endl;
+std::cout << fSaveTo.String() << std::endl;
 fprintf(file, fContent.String());
 fclose(file);
 }

@@ -52,7 +52,7 @@ Button1_Text.SetTo(button1_text);
 	
 
 _SetupEverything();	
-cout << "Setup everything" << endl;
+std::cout << "Setup everything" << std::endl;
 }
 
 //-----------------------------------------------------------------
@@ -124,7 +124,7 @@ SetTitle(Alert_Name.String());
 		}
 		else
 		{
-		cout << "only one button" << endl;
+		std::cout << "only one button" << std::endl;
 		TempFrame.Set(ButtonPostItsFrame3.left, ButtonPostItsFrame3.top, ButtonPostItsFrame3.right, ButtonPostItsFrame3.bottom);
 		}
 		if (fButton3Enabled)
@@ -143,7 +143,7 @@ SetTitle(Alert_Name.String());
 			}
 			else
 			{
-			cout << "Only two buttons" << endl;
+			std::cout << "Only two buttons" << std::endl;
 			TempFrame.Set(ButtonPostItsFrame3.left, ButtonPostItsFrame3.top, ButtonPostItsFrame3.right, ButtonPostItsFrame3.bottom);
 			}
 		AlertButton2 = new BButton(TempFrame, "AlertButton2", Button2_Text.String(), new BMessage(MSG_BUTTON2));
@@ -153,7 +153,7 @@ SetTitle(Alert_Name.String());
 	//3
 		if (fButton3Enabled)
 		{
-		cout << "OMG, three buttons" << endl;
+		std::cout << "OMG, three buttons" << std::endl;
 		TempFrame.Set(ButtonPostItsFrame3.left, ButtonPostItsFrame3.top, ButtonPostItsFrame3.right, ButtonPostItsFrame3.bottom);
 		AlertButton3 = new BButton(TempFrame, "AlertButton3", Button3_Text.String(), new BMessage(MSG_BUTTON3));
 		AlertButton3->MakeDefault(true);

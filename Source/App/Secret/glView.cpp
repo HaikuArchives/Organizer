@@ -7,7 +7,7 @@
 #include "glWindow.h"
 
 #include <opengl/GL/gl.h>
-#include <opengl/GL/glu.h>
+//#include <opengl/GL/glu.h>
 #include <app/Application.h>
 #include <interface/InterfaceDefs.h>
 #include <interface/Bitmap.h>
