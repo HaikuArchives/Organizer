@@ -302,7 +302,7 @@ BString FilePath;
 	MSave Save("save");
 		if(!strcmp(fPath.String(), ""))
 		{
-		find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+		find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 		fPath.SetTo(Path.Path());
 		fPath.Append(SAVE_NOTE_PATH);
 		Path = fPath.String();
@@ -359,7 +359,7 @@ BEntry Entry("/boot/home");
 	MSave Save("save");
 		if(!strcmp(fPath.String(), ""))
 		{
-		find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+		find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 		fPath.SetTo(Path.Path());
 		fPath.Append(SAVE_NOTE_PATH);
 		Path = fPath.String();
@@ -430,7 +430,7 @@ BEntry Entry("/boot/home");
 	MSave Save("save");
 		if(!strcmp(fPath.String(), ""))
 		{
-		find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+		find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 		fPath.SetTo(Path.Path());
 		fPath.Append(SAVE_HISTORY_PATH);
 		Path = fPath.String();
@@ -509,7 +509,7 @@ BString FilePath;
 	MSave Save("save");
 		if(!strcmp(fPath.String(), ""))
 		{
-		find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+		find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 		fPath.SetTo(Path.Path());
 		fPath.Append(SAVE_NOTE_PATH);
 		Path = fPath.String();

@@ -339,7 +339,7 @@ void mWindow::GetSettingsPath(BPath *path)
 {
 BPath Path;
 BString string;
-find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 string.SetTo(Path.Path());
 string.Append(SAVE_SETTINGS_PATH);
 path->SetTo(string.String());
@@ -358,7 +358,7 @@ BString tempString4;
 BString FilePath;
 BEntry Entry("/boot/home");
 
-find_directory(B_COMMON_SETTINGS_DIRECTORY, &fPath);
+find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &fPath);
 tempString.SetTo(fPath.Path());
 tempString.Append(SAVE_NOTE_PATH);
 fPath = tempString.String();

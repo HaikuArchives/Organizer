@@ -39,7 +39,7 @@ void PreferencesWindow::MessageReceived(BMessage *message)
 		BPath Path;
 		BString String;
 		
-		find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+		find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 		String.SetTo(Path.Path());
 		String.Append(SAVE_SETTINGS_PATH);
 		String.Append(SAVE_FILE_NAME);

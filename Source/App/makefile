@@ -29,7 +29,7 @@ LIBS= root \
 	translation \
 	fSub
 DEFINES= 
-LIBPATHS= ../../lib
+LIBPATHS= ../lib
 
 SYSTEM_INCLUDE_PATHS = 
 LOCAL_INCLUDE_PATHS = 

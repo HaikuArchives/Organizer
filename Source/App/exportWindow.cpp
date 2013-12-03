@@ -114,7 +114,7 @@ BPath Path;
 BEntry Entry("/boot/home");
 MSave Load("Load");
 
-find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 fFolderPath.SetTo(Path.Path());
 fFolderPath.Append(SAVE_NOTE_PATH);
 

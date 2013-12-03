@@ -1,4 +1,4 @@
-NAME= ../../../lib/libfSub.so
+NAME= ../libfSub.so
 TYPE= SHARED
 SRCS= Bitmap.cpp \
 	Bubble.cpp \

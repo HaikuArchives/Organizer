@@ -145,7 +145,7 @@ BString tempString2;
 BString tempString3;
 BString FilePath;
 
-find_directory(B_COMMON_SETTINGS_DIRECTORY, &fPath);
+find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &fPath);
 tempString.SetTo(fPath.Path());
 tempString.Append(SAVE_HISTORY_PATH);
 fPath = tempString.String();
@@ -183,7 +183,7 @@ BPath Path;
 int ItemNumber = 1;
 MSave Save("Save");
 
-find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 tempString.SetTo(Path.Path());
 tempString.Append(SAVE_HISTORY_PATH);
 	for (int a = 1; a <= INT_MAXFILES; a++)
