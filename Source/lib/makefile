@@ -25,5 +25,5 @@ SYMBOLS =
 WARNINGS = 
 
 ## include the makefile-engine
-include $(BUILDHOME)/etc/makefile-engine
+include /system/develop/etc/makefile-engine
 
