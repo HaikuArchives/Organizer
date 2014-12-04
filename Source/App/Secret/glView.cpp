@@ -7,7 +7,7 @@
 #include "glWindow.h"
 
 #include <opengl/GL/gl.h>
-#include <opengl/GL/glu.h>
+//#include <opengl/GL/glu.h>
 #include <app/Application.h>
 #include <interface/InterfaceDefs.h>
 #include <interface/Bitmap.h>
@@ -22,7 +22,7 @@
 // Constructor/destructor
 TutGLView::TutGLView( Wind *owner_wind, BRect frame, const char *name, 
 					  int32 mode, int32 flags )
-	: BGLView( frame, const_cast<char *>( name ), mode, flags, 
+	: BGLView( frame, name, mode, flags,
 			   BGL_RGB | BGL_DOUBLE | BGL_DEPTH ),
 	  pad_x( 1.0 ),
 	  pad_y(-2.0),
@@ -131,7 +131,7 @@ void TutGLView::ErrorCallback( GLenum err )
 	// out.  You'll have to run the application from a Terminal to see
 	// these.
 	fprintf( stderr, "Unexpected error occured (%ld):\n", err );
-	fprintf( stderr, "\t%s\n", gluErrorString( err ) );
+	//fprintf( stderr, "\t%s\n", gluErrorString( err ) );
 }
 
 void TutGLView::Render( void )
@@ -164,7 +164,7 @@ void TutGLView::gInit( void )
 	glMatrixMode( GL_PROJECTION );
 	glLoadIdentity();
 	BRect r = Bounds();
-	gluPerspective( 45.0, r.Width() / r.Height(), 0.1, 100.0 );
+	//gluPerspective( 45.0, r.Width() / r.Height(), 0.1, 100.0 );
 	glMatrixMode( GL_MODELVIEW );
 }
 
@@ -178,7 +178,7 @@ void TutGLView::gReshape( int width, int height )
 	glViewport( 0, 0, width, height );
 	glMatrixMode( GL_PROJECTION );
 	glLoadIdentity();
-	gluPerspective( 45.0, (float)width/(float)height, 0.1, 100.0 );
+	//gluPerspective( 45.0, (float)width/(float)height, 0.1, 100.0 );
 	glMatrixMode( GL_MODELVIEW );
 }
 

@@ -11,7 +11,7 @@ int main(int32 argc, char** argv)
 BPath path;
 BString tmp;
 MSave savefile("savefile");
-find_directory(B_COMMON_SETTINGS_DIRECTORY, &path);
+find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &path);
 tmp.SetTo(path.Path());
 tmp.Append(SAVE_SETTINGS_PATH);
 path.SetTo(tmp.String());
@@ -62,7 +62,7 @@ RunNotification = true;
 								\Notes
 *********************************************/
 //Make sure all the folders are there
-find_directory(B_COMMON_SETTINGS_DIRECTORY, &path);
+find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &path);
 //Make fSub folder
 tmp.SetTo("mkdir ");
 tmp.Append(path.Path());
@@ -364,7 +364,7 @@ void mApp::MessageReceived(BMessage *message)
 					BString tempString;
 					BString tempString2;
 					BPath Path;
-					find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+					find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 					tempString.SetTo(path.Path());
 					tempString.Append(SAVE_SETTINGS_PATH);
 					save.FindString(tempString.String(), SAVE_FILE_NAME, NAME_EXEC_DIR, &tempString2, "M_ERROR");
@@ -409,16 +409,16 @@ void mApp::MessageReceived(BMessage *message)
 //-----------------------------------------------------------------
 void mApp::RefsReceived(BMessage *message)
 {
-cout << "REFS RECIEVED!! " << endl;
+std::cout << "REFS RECIEVED!! " << std::endl;
 //Get Filepanelpath
 int32	count = 0;
 uint32	type = 0;
 message->GetInfo("refs", &type, &count);
-cout << "type is " << type << "count is " << count << endl;
+std::cout << "type is " << type << "count is " << count << std::endl;
 	for (int32 i = 0; i < count; i++) 
 	{
 	entry_ref	ref;
-	cout << " asd its " << i << endl;
+	std::cout << " asd its " << i <<std::endl;
 		if (message->FindRef("refs", i, &ref) == B_NO_ERROR) 
 		{
 		BEntry entry(&ref);
@@ -432,12 +432,12 @@ cout << "type is " << type << "count is " << count << endl;
 			}
 			else
 			{
-			cout << "2_" << endl;
+			std::cout << "2_" << std::endl;
 			}
 		}
 		else
 		{
-		cout << "1_" << endl;
+		std::cout << "1_" << std::endl;
 		}
 	}
 }
@@ -476,7 +476,7 @@ int32
 mApp::CheckForUpdateThread_static(void *data)
 {
 	mApp *check4updates = (mApp *)data;
-	check4updates->CheckForUpdateThread();
+	//check4updates->CheckForUpdateThread();
 	return 0;
 }
 
@@ -577,7 +577,7 @@ BEntry Entry("/boot/home");
 	tmpString << _mWindow->_CalenderView->mCalender->ThisYear();
 	_mWindow->Unlock();
 	
-	find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+	find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 	FolderPath.SetTo(Path.Path());
 	FolderPath << SAVE_NOTE_PATH;
 		for (int a = 1; a <= INT_MAXFILES; a++)
@@ -631,7 +631,7 @@ BEntry Entry("/boot/home");
 					if (NowMinute == TodayMinute && NowHour == TodayHour)
 					{
 					Save.FindString(FolderPath.String(), FileName.String(), SAVE_FILE_NOTE, &tmpString, "M_ERROR");
-					find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+					find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 					FolderPath.SetTo(Path.Path());
 					FolderPath << SAVE_PATH_PART_1 << SAVE_PATH_PART_2;
 					FileName.SetTo("TempRunScript");

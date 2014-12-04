@@ -6,7 +6,7 @@
 #include <StorageKit.h>
 #include <SupportKit.h>
 #include <TranslationKit.h>
-#include <iostream.h>
+#include <iostream>
 
 #define MSG_BUTTON1		'1001'
 #define MSG_BUTTON2		'1002'

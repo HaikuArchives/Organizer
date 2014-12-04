@@ -114,7 +114,7 @@ BPath Path;
 BEntry Entry("/boot/home");
 MSave Load("Load");
 
-find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 fFolderPath.SetTo(Path.Path());
 fFolderPath.Append(SAVE_NOTE_PATH);
 
@@ -210,7 +210,7 @@ fContent << "</body>\n</html>";
 fSaveTo.Append("/");
 fSaveTo.Append(_ExportView->mFileNameControl->Text());
 FILE* file = fopen(fSaveTo.String(), "w");
-cout << fSaveTo.String() << endl;
+std::cout << fSaveTo.String() << std::endl;
 fprintf(file, fContent.String());
 fclose(file);
 }

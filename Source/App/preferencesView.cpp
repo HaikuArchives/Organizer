@@ -49,7 +49,7 @@ AddChild(mSettingsBox);
 
 MSave load("load");
 
-find_directory(B_COMMON_SETTINGS_DIRECTORY, &Path);
+find_directory(B_SYSTEM_SETTINGS_DIRECTORY, &Path);
 String.SetTo(Path.Path());
 String.Append(SAVE_SETTINGS_PATH);
 Path.SetTo(String.String());

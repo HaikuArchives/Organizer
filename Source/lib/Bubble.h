@@ -6,7 +6,7 @@
 #include <StorageKit.h>
 #include <SupportKit.h>
 #include <TranslationKit.h>
-#include <iostream.h>
+#include <iostream>
 
 
 class _EXPORT MBubble	

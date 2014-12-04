@@ -20,16 +20,15 @@ SRCS=aboutWindow.cpp \
 	Secret/glView.cpp \
 	Secret/glWindow.cpp
 RSRCS= Project.rsrc
-LIBS= root \
-	be \
-	stdc++.r4 \
+LIBS= be \
+	$(STDCPPLIBS) \
 	game \
 	GL \
 	tracker \
 	translation \
 	fSub
 DEFINES= 
-LIBPATHS= ../../lib
+LIBPATHS= ../lib
 
 SYSTEM_INCLUDE_PATHS = 
 LOCAL_INCLUDE_PATHS = 
@@ -38,10 +37,11 @@ DRIVER_PATH =
 APP_VERSION = 
 DEBUGGER = 
 LINKER_FLAGS = 
-COMPILER_FLAGS = 
+CFLAGS= -fpermissive
 SYMBOLS = 
 WARNINGS = 
 
-## include the makefile-engine
-include $(BUILDHOME)/etc/makefile-engine
-
+## Include the Makefile-Engine
+DEVEL_DIRECTORY := \
+	$(shell findpaths -r "makefile_engine" B_FIND_PATH_DEVELOP_DIRECTORY)
+include $(DEVEL_DIRECTORY)/etc/makefile-engine
