@@ -1,3 +1,8 @@
+# Organizer has been superceeded by Calendar :calendar:
+# https://github.com/HaikuArchives/Calendar :calendar:
+
+<hr>
+
 Organizer
 =========
 ![Screenshot of Organizer](Organizer.png)
